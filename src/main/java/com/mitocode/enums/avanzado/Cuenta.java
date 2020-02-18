@@ -1,4 +1,4 @@
-package com.mitocode.ejercicio6.enums;
+package com.mitocode.enums.avanzado;
 
 public abstract class Cuenta{
 
@@ -73,5 +73,7 @@ public abstract class Cuenta{
 		return "Cuenta [numeroCuenta=" + numeroCuenta + ", titular=" + titular + ", saldo=" + saldo + ", estado="
 				+ estado + "]";
 	}
+
+
 
 }
