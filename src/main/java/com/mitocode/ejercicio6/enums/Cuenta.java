@@ -1,10 +1,11 @@
-package com.mitocode.ejercicio5.polimorfismo;
+package com.mitocode.ejercicio6.enums;
 
-public  class  Cuenta{
+public abstract class Cuenta{
 
 	private String numeroCuenta;
 	private String titular;
 	protected double saldo;
+	private Estado estado;
 	
 	public Cuenta() {
 		super();
@@ -14,6 +15,7 @@ public  class  Cuenta{
 		super();
 		this.numeroCuenta = numeroCuenta;
 		this.titular = titular;
+		this.estado = estado.ACTIVA;
 	}
 
 	public Cuenta(String numeroCuenta, String titular, double saldo) {
@@ -21,6 +23,7 @@ public  class  Cuenta{
 		this.numeroCuenta = numeroCuenta;
 		this.titular = titular;
 		this.saldo = saldo;
+		this.estado = estado.ACTIVA;
 	}
 
 	public String getNumeroCuenta() {
@@ -47,10 +50,18 @@ public  class  Cuenta{
 		this.saldo = saldo;
 	}
 	
+	
+	
+	public Estado getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
+
 	public void deposito(double monto) {
 		saldo = saldo + monto;
-//		Otra forma
-//		saldo += monto;
 	}
 	
 	public void retiro(double monto) {
@@ -59,8 +70,11 @@ public  class  Cuenta{
 
 	@Override
 	public String toString() {
-		return "Cuenta [numeroCuenta=" + numeroCuenta + ", titular=" + titular + ", saldo=" + saldo + "]";
+		return "Cuenta [numeroCuenta=" + numeroCuenta + ", titular=" + titular + ", saldo=" + saldo + ", estado="
+				+ estado + "]";
 	}
+
+	
 	
 	
 
