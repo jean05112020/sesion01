@@ -1,6 +1,6 @@
 package com.mitocode.ejerecicio9.collecciones;
 
-import java.awt.List;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -26,7 +26,7 @@ public class Programa2 {
 			System.out.println(iterator.next());
 		}
 		
-		ArrayList<CuentaAhorros> listaCuentas = new ArrayList<>();
+		List<CuentaAhorros> listaCuentas = new ArrayList<>();
 		
 		CuentaAhorros c1 = new CuentaAhorros();
 		c1.setNumeroCuenta("10");
